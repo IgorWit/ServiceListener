@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Дата звонка</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dist/datepicker.css">
+</head>
+<body>
+  <form action="listener.php" method="get">
+  <div class="container">
+  	<div style="text-align: center;">
+    <h1>Выбор даты для выгрузки звонка</h1>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-target="#modal" data-toggle="modal">
+      Выбор даты
+    </button>
+	</div>
+    <!-- Modal -->
+    <div class="modal fade" id="modal" role="dialog" aria-labelledby="modalLabel" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Выбор даты звонка</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+             <input type="text" class="form-control" data-toggle="datepicker" name="choosedate">
+          </div>
+          <div class="modal-footer">
+             <input type="submit" class="btn btn-secondary" value="Перейти">
+<!--             <button type="button" class="btn btn-secondary" data-dismiss="modal">Перейти</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/datepicker.js"></script>
+  <script>
+    $(function() {
+      $('[data-toggle="datepicker"]').datepicker({
+        autoHide: true,
+        zIndex: 2048,
+        format:'yyyy-mm-dd',
+      });
+    });
+  </script>
+</body>
+</html>
